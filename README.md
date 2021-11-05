@@ -1,5 +1,5 @@
-# railway-xray-new
-# 使用Railway部署Xray高性能代理服务，通过ws传输的 (vmess、vless、trojan shadowsocks、socks)等协议
+# huoche
+# 使用Railway部署huoche高性能代理服务，通过ws传输的 (vmess、vless、trojan shadowsocks、socks)等协议
 
 > 提醒： 滥用可能导致账户被BAN！！！ 
 
@@ -41,7 +41,7 @@ fork 之后 ，在railway的dashboard，选择 new project
 
 ### 客户端
 * **务必替换所有的`xxx.railway.app`为railway分配的项目域名**  
-* **务必替换所有的`24b4b1e1-7a89-45f6-858c-242cf53b5bdb`为部署时设置的UUID,建议更改,不要每个人都一样**  
+* **务必替换所有的`ff39d824-2851-47b0-aa23-03f2ea9bd672`为部署时设置的UUID,建议更改,不要每个人都一样**  
 
 **XRay 将在部署时会自动实配安装`最新版本`。**
 
@@ -55,13 +55,13 @@ fork 之后 ，在railway的dashboard，选择 new project
 * 代理协议：vless 或 vmess
 * 地址：xxx.herokuapp.com
 * 端口：443
-* 默认UUID：24b4b1e1-7a89-45f6-858c-242cf53b5bdb
+* 默认UUID：ff39d824-2851-47b0-aa23-03f2ea9bd672
 * vmess额外id：0
 * 加密：none
 * 传输协议：ws
 * 伪装类型：none
 * 伪装域名：xxx.workers.dev(CF Workers反代地址)
-* 路径：/24b4b1e1-7a89-45f6-858c-242cf53b5bdb-vless // 默认vless使用(/自定义UUID码-vless)，vmess使用(/自定义UUID码-vmess)
+* 路径：/ff39d824-2851-47b0-aa23-03f2ea9bd672-vless // 默认vless使用(/自定义UUID码-vless)，vmess使用(/自定义UUID码-vmess)
 * 底层传输安全：tls
 * 跳过证书验证：false
 ```
@@ -79,11 +79,11 @@ fork 之后 ，在railway的dashboard，选择 new project
     "remote_addr": "xxx.herokuapp.com",
     "remote_port": 443,
     "password": [
-        "24b4b1e1-7a89-45f6-858c-242cf53b5bdb"
+        "ff39d824-2851-47b0-aa23-03f2ea9bd672"
     ],
     "websocket": {
         "enabled": true,
-        "path": "/24b4b1e1-7a89-45f6-858c-242cf53b5bdb-trojan",
+        "path": "/ff39d824-2851-47b0-aa23-03f2ea9bd672-trojan",
         "host": "xxx.herokuapp.com"
     }
 }
@@ -100,7 +100,7 @@ fork 之后 ，在railway的dashboard，选择 new project
 * 密码：24b4b1e1-7a89-45f6-858c-242cf53b5bdb
 * 加密：chacha20-ietf-poly1305
 * 插件程序：xray-plugin_windows_amd64.exe  //需将插件https://github.com/shadowsocks/xray-plugin/releases下载解压后放至shadowsocks同目录
-* 插件选项: tls;host=xxx.herokuapp.com;path=/24b4b1e1-7a89-45f6-858c-242cf53b5bdb-ss
+* 插件选项: tls;host=xxx.herokuapp.com;path=/ff39d824-2851-47b0-aa23-03f2ea9bd672-ss
 ```
 </details>
 
